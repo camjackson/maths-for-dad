@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Maths for dad</title>
+    <script type="application/javascript" src="maths.js"></script>
+    <script type="application/javascript" src="getCombinations.js"></script>
+    <script type="application/javascript" src="verifyCombinations.js"></script>
+    <script type="application/javascript" src="sortCombinations.js"></script>
+    <script
+      type="application/javascript"
+      src="uniquifyCombinations.js"
+    ></script>
+    <script type="application/javascript" src="populateTable.js"></script>
+    <script type="application/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form id="form">
+      <label
+        ><input
+          type="number"
+          value="2"
+          min="2"
+          max="50"
+          id="sumInput"
+        />Sum</label
+      >
+
+      <label>
+        <input type="number" value="4" min="2" id="numOfNumsInput" />Maximum
+        number of numbers</label
+      >
+
+      <label
+        ><input type="radio" name="sortMode" value="numbers" checked />Sort by
+        numbers</label
+      >
+      <label
+        ><input type="radio" name="sortMode" value="product" />Sort by
+        product</label
+      >
+
+      <input type="submit" value="Go!" />
+    </form>
+    <table id="table">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
