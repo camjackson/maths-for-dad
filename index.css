@@ -8,6 +8,10 @@ input[type="number"] {
   width: 4rem;
 }
 
+td {
+  min-width: 1rem;
+}
+
 .highlight {
   background-color: lightgray;
 }
