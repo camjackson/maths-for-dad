@@ -4,19 +4,29 @@ window.onload = () => {
 
 const go = (e) => {
   e.preventDefault();
+  const button = document.querySelector('input[type="submit"]');
+  button.value = "Processing...";
+  button.disabled = true;
 
-  const target = parseInt(window.sumInput.value, 10);
-  const maxNumberofNumbers = parseInt(window.numOfNumsInput.value, 10);
-  const sortMode = document.querySelector(
-    'input[name="sortMode"]:checked'
-  ).value;
+  clearTable();
 
-  const combinations = getCombinations(target, maxNumberofNumbers);
+  setTimeout(() => {
+    const target = parseInt(window.sumInput.value, 10);
+    const maxNumberofNumbers = parseInt(window.numOfNumsInput.value, 10);
+    const sortMode = document.querySelector(
+      'input[name="sortMode"]:checked'
+    ).value;
 
-  verifyCombinations(combinations, target);
-  sortCombinations(combinations, sortMode);
+    const combinations = getCombinations(target, maxNumberofNumbers);
 
-  const uniqueCombinations = uniquifyCombinations(combinations);
+    verifyCombinations(combinations, target);
+    sortCombinations(combinations, sortMode);
 
-  populateTable(uniqueCombinations);
+    const uniqueCombinations = uniquifyCombinations(combinations);
+
+    populateTable(uniqueCombinations);
+
+    button.value = "Go!";
+    button.disabled = false;
+  });
 };

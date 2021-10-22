@@ -1,7 +1,6 @@
 const populateTable = (combinations) => {
   const maxNumberOfNumbers = getMaxNumberOfNumbers(combinations);
 
-  clearTable();
   populateThead(maxNumberOfNumbers);
   populateTBody(maxNumberOfNumbers, combinations);
 };
